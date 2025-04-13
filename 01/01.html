@@ -65,20 +65,29 @@
 
         // 조건 => 별을 마름모로 1 3 5 3 1 만들기
         // * *** ***** *** *
-        for (i = 0; i < 6; i++) {
-            if (i % 2 === 0) continue;
-            console.log(' '.repeat((5 - (i))/2) + '*'.repeat(i));
-        }
-        for (i = 3; i > 0; i--) {
-            if (i % 2 === 0) continue;
-            console.log(' '.repeat((5 - i)/2) + '*'.repeat(i))
-        }
+        //for (i = 0; i < 6; i++) {
+        //    if (i % 2 === 0) continue;
+        //    console.log(' '.repeat((5 - (i))/2) + '*'.repeat(i));
+        //}
+        //for (i = 3; i > 0; i--) {
+        //    if (i % 2 === 0) continue;
+        //    console.log(' '.repeat((5 - i)/2) + '*'.repeat(i))
+        //}
 
         // 조건 -> 크리스마스 트리
-        for (i = 0; i < 10; i++) {
-            if (i % 2 === 0) continue;
-            console.log(' '.repeat((10 - i)/2) + '*'.repeat(i));
+        //for (i = 0; i < 10; i++) {
+        //    if (i % 2 === 0) continue;
+        //    console.log(' '.repeat((10 - i)/2) + '*'.repeat(i));
+        //}
+
+        // 조건, splice, indexOf, 반복문 사용해서 '라' 제거하기
+        const arr = ['가', '라', '다', '라', '마', '라'];
+        let la = arr.indexOf('라');
+        while (la > -1) {
+            arr.splice(la, 1);
+            la = arr.indexOf('라');
         }
+        console.log(arr);
     </script>
 </body>
 </html>
